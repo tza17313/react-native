@@ -205,5 +205,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
 }
 
 #endif
-
+- (BOOL) isTheSameColor2:(UIColor*)color1 anotherColor:(UIColor*)color2{
+    return  CGColorEqualToColor(color1.CGColor, color2.CGColor);
+}
 @end
