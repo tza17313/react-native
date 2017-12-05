@@ -1,58 +1,64 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "react-native@0.43.4",
-        "scope": null,
-        "escapedName": "react-native",
-        "name": "react-native",
-        "rawSpec": "0.43.4",
-        "spec": "0.43.4",
-        "type": "version"
-      },
-      "/Users/rayleigh/dev/baie"
-    ]
-  ],
-  "_cnpm_publish_time": 1492728452160,
-  "_from": "react-native@0.43.4",
-  "_hasShrinkwrap": false,
-  "_id": "react-native@0.43.4",
-  "_inCache": true,
+  "_from": "react-native@0.44.3",
+  "_id": "react-native@0.44.3",
+  "_inBundle": false,
+  "_integrity": "sha1-BFUOHN/GGacS8/WWnWjNfC3EwHM=",
   "_location": "/react-native",
-  "_nodeVersion": "6.2.0",
-  "_npmOperationalInternal": {
-    "host": "packages-18-east.internal.npmjs.com",
-    "tmp": "tmp/react-native-0.43.4.tgz_1492728451192_0.1718962979502976"
+  "_phantomChildren": {
+    "babel-plugin-check-es2015-constants": "6.22.0",
+    "babel-plugin-react-transform": "2.0.2",
+    "babel-plugin-syntax-async-functions": "6.13.0",
+    "babel-plugin-syntax-class-properties": "6.13.0",
+    "babel-plugin-syntax-flow": "6.18.0",
+    "babel-plugin-syntax-jsx": "6.18.0",
+    "babel-plugin-syntax-trailing-function-commas": "6.22.0",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "babel-plugin-transform-es2015-arrow-functions": "6.22.0",
+    "babel-plugin-transform-es2015-block-scoping": "6.26.0",
+    "babel-plugin-transform-es2015-classes": "6.24.1",
+    "babel-plugin-transform-es2015-computed-properties": "6.24.1",
+    "babel-plugin-transform-es2015-destructuring": "6.23.0",
+    "babel-plugin-transform-es2015-for-of": "6.23.0",
+    "babel-plugin-transform-es2015-function-name": "6.24.1",
+    "babel-plugin-transform-es2015-literals": "6.22.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.26.0",
+    "babel-plugin-transform-es2015-parameters": "6.24.1",
+    "babel-plugin-transform-es2015-shorthand-properties": "6.24.1",
+    "babel-plugin-transform-es2015-spread": "6.22.0",
+    "babel-plugin-transform-es2015-template-literals": "6.22.0",
+    "babel-plugin-transform-flow-strip-types": "6.22.0",
+    "babel-plugin-transform-object-assign": "6.22.0",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-plugin-transform-react-display-name": "6.25.0",
+    "babel-plugin-transform-react-jsx": "6.24.1",
+    "babel-plugin-transform-react-jsx-source": "6.22.0",
+    "babel-plugin-transform-regenerator": "6.26.0",
+    "react-transform-hmr": "1.0.4"
   },
-  "_npmUser": {
-    "name": "bestander",
-    "email": "bestander@gmail.com"
-  },
-  "_npmVersion": "3.8.9",
-  "_phantomChildren": {},
   "_requested": {
-    "raw": "react-native@0.43.4",
-    "scope": null,
-    "escapedName": "react-native",
+    "type": "version",
+    "registry": true,
+    "raw": "react-native@0.44.3",
     "name": "react-native",
-    "rawSpec": "0.43.4",
-    "spec": "0.43.4",
-    "type": "version"
+    "escapedName": "react-native",
+    "rawSpec": "0.44.3",
+    "saveSpec": null,
+    "fetchSpec": "0.44.3"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npm.taobao.org/react-native/download/react-native-0.43.4.tgz",
-  "_shasum": "92fb6937ab415b2e5612835a93a61845de98eb4d",
-  "_shrinkwrap": null,
-  "_spec": "react-native@0.43.4",
-  "_where": "/Users/rayleigh/dev/baie",
+  "_resolved": "https://registry.npmjs.org/react-native/-/react-native-0.44.3.tgz",
+  "_shasum": "04550e1cdfc619a712f3f5969d68cd7c2dc4c073",
+  "_spec": "react-native@0.44.3",
+  "_where": "/Users/rayleigh/dev/baieapp_bakup",
   "bin": {
     "react-native": "local-cli/wrong-react-native.js"
   },
   "bugs": {
     "url": "https://github.com/facebook/react-native/issues"
   },
+  "bundleDependencies": false,
   "dependencies": {
     "absolute-path": "^0.0.0",
     "art": "^0.10.0",
@@ -72,7 +78,7 @@
     "babel-runtime": "^6.20.0",
     "babel-traverse": "^6.21.0",
     "babel-types": "^6.21.0",
-    "babylon": "^6.14.1",
+    "babylon": "^6.16.1",
     "base64-js": "^1.1.2",
     "bser": "^1.0.2",
     "chalk": "^1.1.1",
@@ -86,14 +92,14 @@
     "fbjs": "~0.8.9",
     "fbjs-scripts": "^0.7.0",
     "form-data": "^2.1.1",
-    "fs-extra": "^0.26.2",
-    "glob": "^5.0.15",
+    "fs-extra": "^1.0.0",
+    "glob": "^7.1.1",
     "graceful-fs": "^4.1.3",
     "image-size": "^0.3.5",
     "immutable": "~3.7.6",
     "imurmurhash": "^0.1.4",
     "inquirer": "^0.12.0",
-    "jest-haste-map": "19.0.0",
+    "jest-haste-map": "^20.0.4",
     "joi": "^6.6.1",
     "json-stable-stringify": "^1.0.1",
     "json5": "^0.4.0",
@@ -108,6 +114,7 @@
     "opn": "^3.0.2",
     "optimist": "^0.6.1",
     "plist": "^1.2.0",
+    "pretty-format": "^4.2.1",
     "promise": "^7.1.1",
     "react-clone-referenced-element": "^1.0.1",
     "react-devtools-core": "^2.0.8",
@@ -124,17 +131,18 @@
     "stacktrace-parser": "^0.1.3",
     "temp": "0.8.3",
     "throat": "^3.0.0",
-    "uglify-js": "^2.6.2",
+    "uglify-js": "2.7.5",
     "whatwg-fetch": "^1.0.0",
     "wordwrap": "^1.0.0",
     "worker-farm": "^1.3.1",
     "write-file-atomic": "^1.2.0",
     "ws": "^1.1.0",
-    "xcode": "^0.8.9",
+    "xcode": "^0.9.1",
     "xmldoc": "^0.4.0",
     "xpipe": "^1.0.5",
     "yargs": "^6.4.0"
   },
+  "deprecated": false,
   "description": "A framework for building native apps using React",
   "devDependencies": {
     "babel-eslint": "^7.1.1",
@@ -142,7 +150,7 @@
     "eslint-plugin-babel": "^3.3.0",
     "eslint-plugin-flowtype": "^2.20.0",
     "eslint-plugin-react": "^6.4.1",
-    "flow-bin": "^0.40.0",
+    "flow-bin": "^0.42.0",
     "jest": "19.0.2",
     "jest-repl": "19.0.2",
     "jest-runtime": "19.0.2",
@@ -153,13 +161,6 @@
     "shelljs": "0.6.0",
     "sinon": "^2.0.0-pre.2"
   },
-  "directories": {},
-  "dist": {
-    "shasum": "92fb6937ab415b2e5612835a93a61845de98eb4d",
-    "size": 9319382,
-    "noattachment": false,
-    "tarball": "http://registry.npm.taobao.org/react-native/download/react-native-0.43.4.tgz"
-  },
   "engines": {
     "node": ">=4"
   },
@@ -169,6 +170,7 @@
     "cli.js",
     "flow",
     "init.sh",
+    "ios-cc.sh",
     "ios-install-third-party.sh",
     "jest-preset.json",
     "jest",
@@ -263,59 +265,10 @@
   },
   "license": "BSD-3-Clause",
   "main": "Libraries/react-native/react-native-implementation.js",
-  "maintainers": [
-    {
-      "name": "amasad",
-      "email": "amjad.masad@gmail.com"
-    },
-    {
-      "name": "bestander",
-      "email": "bestander@gmail.com"
-    },
-    {
-      "name": "brentvatne",
-      "email": "brentvatne@gmail.com"
-    },
-    {
-      "name": "ericvicenti",
-      "email": "ericvicenti@gmail.com"
-    },
-    {
-      "name": "fb",
-      "email": "opensource+npm@fb.com"
-    },
-    {
-      "name": "foghina",
-      "email": "felix@oghina.com"
-    },
-    {
-      "name": "frantic",
-      "email": "alex.frantic@gmail.com"
-    },
-    {
-      "name": "ide",
-      "email": "ide+npm@jameside.com"
-    },
-    {
-      "name": "mkonicek",
-      "email": "martin.konicek@gmail.com"
-    },
-    {
-      "name": "spicyj",
-      "email": "ben@benalpert.com"
-    },
-    {
-      "name": "vjeux",
-      "email": "vjeuxx@gmail.com"
-    }
-  ],
   "name": "react-native",
-  "optionalDependencies": {},
   "peerDependencies": {
     "react": "16.0.0-alpha.6"
   },
-  "publish_time": 1492728452160,
-  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/facebook/react-native.git"
@@ -335,5 +288,5 @@
     "test-android-setup": "docker pull containership/android-base:latest",
     "test-android-unit": "npm run test-android-build && npm run test-android-run-unit"
   },
-  "version": "0.43.4"
+  "version": "0.44.3"
 }
