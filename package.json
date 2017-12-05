@@ -51,7 +51,7 @@
   "_resolved": "https://registry.npmjs.org/react-native/-/react-native-0.44.3.tgz",
   "_shasum": "04550e1cdfc619a712f3f5969d68cd7c2dc4c073",
   "_spec": "react-native@0.44.3",
-  "_where": "/Users/rayleigh/dev/baieapp_bakup",
+  "_where": "/Users/rayleigh/dev/baieapp",
   "bin": {
     "react-native": "local-cli/wrong-react-native.js"
   },

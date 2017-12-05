@@ -138,12 +138,10 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
 
 - (void)setTintColor:(UIColor *)tintColor
 {
-
     if ([self isTheSameColor2:tintColor anotherColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:1]]) {
         _tabController.tabBar.hidden = YES;
     }
-
-    _tabController.tabBar.tintColor = tintColor;
+  _tabController.tabBar.tintColor = tintColor;
 }
 
 - (BOOL)translucent {

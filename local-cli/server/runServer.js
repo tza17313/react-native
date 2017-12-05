@@ -19,7 +19,6 @@ const defaultAssetExts = require('../../packager/defaults').assetExts;
 const defaultPlatforms = require('../../packager/defaults').platforms;
 const defaultProvidesModuleNodeModules = require('../../packager/defaults').providesModuleNodeModules;
 const getDevToolsMiddleware = require('./middleware/getDevToolsMiddleware');
-const heapCaptureMiddleware = require('./middleware/heapCaptureMiddleware.js');
 const http = require('http');
 const indexPageMiddleware = require('./middleware/indexPage');
 const loadRawBodyMiddleware = require('./middleware/loadRawBodyMiddleware');
@@ -31,10 +30,12 @@ const systraceProfileMiddleware = require('./middleware/systraceProfileMiddlewar
 const unless = require('./middleware/unless');
 const webSocketProxy = require('./util/webSocketProxy.js');
 
-function runServer(args, config, readyCallback) {
+function runServer(args, config, startedCallback, readyCallback) {
   var wsProxy = null;
   var ms = null;
   const packagerServer = getPackagerServer(args, config);
+  startedCallback(packagerServer._reporter);
+
   const inspectorProxy = new InspectorProxy();
   const app = connect()
     .use(loadRawBodyMiddleware)
@@ -45,7 +46,6 @@ function runServer(args, config, readyCallback) {
     .use(copyToClipBoardMiddleware)
     .use(statusPageMiddleware)
     .use(systraceProfileMiddleware)
-    .use(heapCaptureMiddleware)
     .use(cpuProfilerMiddleware)
     .use(indexPageMiddleware)
     .use(unless('/inspector', inspectorProxy.processRequest.bind(inspectorProxy)))
@@ -69,7 +69,7 @@ function runServer(args, config, readyCallback) {
       wsProxy = webSocketProxy.attachToServer(serverInstance, '/debugger-proxy');
       ms = messageSocket.attachToServer(serverInstance, '/message');
       inspectorProxy.attachToServer(serverInstance, '/inspector');
-      readyCallback();
+      readyCallback(packagerServer._reporter);
     }
   );
   // Disable any kind of automatic timeout behavior for incoming
