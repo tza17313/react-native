@@ -230,7 +230,7 @@ static NSAttributedString *removeReactTagFromString(NSAttributedString *string)
     _previousSelectionRange = selectedTextRange;
     _textView.selectedTextRange = selectedTextRange;
   } else if (eventLag > RCTTextUpdateLagWarningThreshold) {
-    RCTLogWarn(@"Native TextInput(%@) is %zd events ahead of JS - try to make your JS faster.", self.text, eventLag);
+    RCTLogWarn(@"Native TextInput(%@) is %ld events ahead of JS - try to make your JS faster.", self.text, (long)eventLag);
   }
 }
 
@@ -260,7 +260,7 @@ static NSAttributedString *removeReactTagFromString(NSAttributedString *string)
 
     [self invalidateContentSize];
   } else if (eventLag > RCTTextUpdateLagWarningThreshold) {
-    RCTLogWarn(@"Native TextInput(%@) is %zd events ahead of JS - try to make your JS faster.", self.text, eventLag);
+    RCTLogWarn(@"Native TextInput(%@) is %ld events ahead of JS - try to make your JS faster.", self.text, (long)eventLag);
   }
 }
 
