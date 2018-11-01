@@ -38,8 +38,13 @@ NSString *const RCTJSPostMessageHost = @"postMessage";
   NSString *_injectedJavaScript;
 }
 
+
+//修正 iOS部分机型 webview
 - (void)dealloc
 {
+  [[NSNotificationCenter defaultCenter] removeObserver:self name:UIWindowDidBecomeVisibleNotification object:nil];
+  [[NSNotificationCenter defaultCenter] removeObserver:self name:UIWindowDidBecomeHiddenNotification object:nil];
+
   _webView.delegate = nil;
 }
 
@@ -52,8 +57,23 @@ NSString *const RCTJSPostMessageHost = @"postMessage";
     _webView = [[UIWebView alloc] initWithFrame:self.bounds];
     _webView.delegate = self;
     [self addSubview:_webView];
+
+    //监听UIWindow显示
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(beginFullScreen) name:UIWindowDidBecomeVisibleNotification object:nil];
+    //监听UIWindow隐藏
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(endFullScreen) name:UIWindowDidBecomeHiddenNotification object:nil];
   }
   return self;
+}
+
+
+-(void)beginFullScreen{
+  NSLog(@"进入全屏");
+}
+
+-(void)endFullScreen{
+  NSLog(@"退出全屏");
+  [[UIApplication sharedApplication] setStatusBarHidden:false withAnimation:false];
 }
 
 RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
